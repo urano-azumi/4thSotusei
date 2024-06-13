@@ -10,8 +10,7 @@ public class ChatGPTRequest : MonoBehaviour
     // OpenAIÇÃAPIÉLÅ[
     public string openapiKey;
 
-    public TextMeshProUGUI inputField;
-    private string inputText;
+    public string inputText;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +21,9 @@ public class ChatGPTRequest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Tab)) { PushRequest(); }
     }
 
-    public void InputText()
-    {
-        inputText = inputField.text;
-    }
 
     public void PushRequest()
     {
